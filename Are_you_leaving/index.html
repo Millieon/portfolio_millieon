@@ -24,12 +24,14 @@
             <p>
 
                 “Are you leaving?” is an interactive installation that explores the topics of language barriers, identity struggles and emotional ties that work through distances. I meant to show the fragility, and emotions that are closely entitled to humanity with machine learning, sensors, visuals and sounds.
-                
-                As someone born and bred in Beijing and has lived in California and Several European cities, I sometimes struggle with my cultural identity and reconciling multiple language systems.
-                
-                In April of 2023, I returned to my mother’s hometown Chongqing (China). It was the farewell moment that I had with my grandmother when I realised the bizarre language barrier between me and her since I couldn’t speak her dialect while she couldn’t speak Mandarin. At that very moment, I realised that we are so related yet so alienated from each other. She asked me again and again “ Are you leaving?”, making sure that she understood me correctly, hiding away emotions and making sure I could understand her correctly by just repeating the same sentence. Those words echo powerful and fragile. I recorded that moment and cloned her voice to speak the same things in Mandarin and English, the AI-generated sound gave me creeps and a weird sense of familiarity and comfort since never have I understood my grandma without translation.
-                
-                Driving back to my grandma’s house on mountain roads, not knowing the landscape gave me great challenges. The painful long drive almost works as a metaphor that I am an “outsider” of that town where part of my identity belongs to. I used audio interpolations to generate a sound that gradually changes in between Mandarin, English and the dialect. On the hazy road, I am trying to make sense of and find my way out of the confusing gibberish sound, so that my identity could come out loud and clear.</p>
+        
+            <p>
+                As someone born and bred in Beijing and has lived in California and Several European cities, I sometimes struggle with my cultural identity and reconciling multiple language systems.In April of 2023, I returned to my mother’s hometown Chongqing (China). It was the farewell moment that I had with my grandmother when I realised the bizarre language barrier between me and her since I couldn’t speak her dialect while she couldn’t speak Mandarin. At that very moment, I realised that we are so related yet so alienated from each other. She asked me again and again “ Are you leaving?”, making sure that she understood me correctly, hiding away emotions and making sure I could understand her correctly by just repeating the same sentence. Those words echo powerful and fragile. I recorded that moment and cloned her voice to speak the same things in Mandarin and English, the AI-generated sound gave me creeps and a weird sense of familiarity and comfort since never have I understood my grandma without translation.
+            </p>
+            <p>
+                Driving back to my grandma’s house on mountain roads, not knowing the landscape gave me great challenges. The painful long drive almost works as a metaphor that I am an “outsider” of that town where part of my identity belongs to. I used audio interpolations to generate a sound that gradually changes in between Mandarin, English and the dialect. On the hazy road, I am trying to make sense of and find my way out of the confusing gibberish sound, so that my identity could come out loud and clear.
+            </p>
+            
         </header>
 
         <main>
@@ -38,10 +40,17 @@
                 
 
                 <div class="area1">
-                    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/825112114?h=3e591df918&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="under the gaze0"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                    <iframe src="https://player.vimeo.com/video/862673645?h=6367636a28" width="640" height="338" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<p><a href="https://vimeo.com/862673645">Are you leaving</a> from <a href="https://vimeo.com/user190647993">Millieon Hu</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
                 </div>
+
+                <h2>Technical Implementation</h2>
+                <p>The technical elements of this piece include machine learning ( voice cloning and text-to-speech), and audio interpolation.
+                    I took audio files of my grandmother’s voice, which is a dataset of approximately 3 minutes of recording, and then separated them into clips of 10 seconds and selected the ones of the best quality, constituting my training set.
+                    </p>
+                <p>Afterwards, I’ve used tortoise-tts 1to generate a version of my grandma’s voice speaking things in English, however, because of its pretrained voice model, the results turned out not ideal. I then switched to retrieval-based voice conversion2, I recorded my voice saying things in Mandarin and English, and my friend speaking in Chongqing dialect as the original file, then conversed our voice to my grandma’s voice after the process of feature extraction and pitch and tone learning.</p>
                
-                
+                <p>Afterwards, I did the audio interpolation of the three generated audio files, to create the effect of the audio gradually changing from the dialect, towards Mandarin then English.</p>
       
             </section>
             <!-- <section>
