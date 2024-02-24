@@ -1,0 +1,24 @@
+div.area1
+{
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+}
+div.area1 .one
+{
+    
+    
+    width:30%; 
+    float: left;  
+}
+div.area1 .two
+{
+   
+    width:30%; 
+    float: left;
+}
