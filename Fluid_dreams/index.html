@@ -2,61 +2,141 @@
 <html>
     <head>
         <meta charset="UTF-8">
-
-        <!-- meta viewport tag needed to make site responsive on mobile devices https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag -->
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        <title>Portfolio - Millieon Hu</title>
-
-        <!-- including for some global styling -->
+        <title>A Fluid Dream - Millieon Hu</title>
+        
+        <!-- Global styling -->
         <link rel="stylesheet" href="../css/style.css">
-        <!-- if I had some styling I wanted to include on one special page -->
+        <!-- Project specific styling -->
         <link rel="stylesheet" href="css/demo-style.css">
-
+        
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
     </head>
     <body>
-        <!-- if you have sub-pages think about adding a simple back button -->
-        <nav>
-            <a href="../">Back to Home</a>
+        <div class="cursor"></div>
+        <div class="cursor-follower"></div>
+
+        <nav class="project-nav">
+            <a href="../" class="back-link">← BACK TO HOME</a>
         </nav>
-        <header>
-            <h1>A Fluid Dream (2024)</h1>
-        
+
+        <header class="project-header">
+            <div class="project-meta">
+                <span class="project-year">2024</span>
+                <span class="project-type">AI VIDEO GENERATION</span>
+            </div>
+            <h1>A Fluid Dream</h1>
+            <div class="project-description">
+                <p>"A fluid Dream: Driving away from my grandma's house" is a reconstruction of a memory with AI. Sometimes when memories got blurred, the video of a moment starts to feel surreal. So I wanted to create something that looks alike those moments but quite blurred and foggy. With frame interpolation, it then becomes clearer and clearer to the real video I took in the end. Which one feels more surreal? The reality or AI generation?</p>
+            </div>
         </header>
 
-        <main>
-            <section>
-                <h3></h3>
-                <p> "A fluid Dream: Driving away from my grandma’s house" is a reconstruction of a memory with AI.
-
-                    Sometimes when memories got blurred, the video of a moment starts to feel surreal. So I wanted to create something that looks alike those moments but quite blurred and foggy. With frame interpolation, it then becomes clearer and clearer to the real video I took in the end.
-                    Which one feels more surreal? The reality or AI generation?</p>
-
-                <div class="area1">
-                    <iframe title="vimeo-player" src="https://player.vimeo.com/video/912805540?h=7fb8ec7eb9" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
+        <main class="project-main">
+            <section class="project-story">
+                <div class="story-content">
+                    <p>Memory has a fluid quality - it shifts, blurs, and reconstructs itself over time. This piece explores the liminal space between recollection and reality, between the emotional truth of a moment and its factual documentation. As I drove away from my grandmother's house, I captured a simple video, but the emotional weight of that departure seemed to transform the ordinary into something dreamlike.</p>
+                    
+                    <p>Using AI to reconstruct this memory, I created a version that feels both foreign and familiar - a ghostly echo of the original moment. The gradual clarification through frame interpolation mirrors how memories sometimes come into focus, while questioning whether our technological reconstructions might be more emotionally accurate than the original recordings.</p>
                 </div>
-
-                <h2>Technical Implementation</h2>
-                <p>AI text-to-video and frame interpolation</p>
-                
-      
             </section>
-            <!-- <section>
-                <h3>Free Speech Board</h3>
-                
-                <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/780189660?h=309c96301c&badge=0&autopause=0&player_id=0&app_id=58479/embed" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen frameborder="0" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe></div>
-                
-            </section> -->
+
+            <section>
+                <div class="area1">
+                    <iframe title="vimeo-player" src="https://player.vimeo.com/video/912805540?h=7fb8ec7eb9" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+                    <p><a href="https://player.vimeo.com/video/912805540?h=7fb8ec7eb9">A Fluid Dream</a> from <a href="https://vimeo.com/user190647993">Millieon Hu</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+                </div>
+            </section>
             
 
-           
-
+            <section class="technical-section">
+                <h2>Technical Implementation</h2>
+                <div class="tech-content">
+                    <p>This piece employs AI text-to-video generation and frame interpolation technologies to explore the reconstruction of memory. The process begins with textual descriptions of the original video, which are then fed into AI video generation models to create an abstracted, dreamlike interpretation of the scene.</p>
+                    
+                    <p>Frame interpolation techniques are subsequently applied to gradually transition from the AI-generated footage to the original video recording. This technological process mirrors the psychological phenomenon of memory reconstruction, where our recollections are constantly being rewritten and refined through the lens of emotion and time.</p>
+                    
+                    <p>The juxtaposition between AI-generated and authentic footage raises questions about the nature of truth in our digital age, particularly in relation to personal memory and computational interpretation of human experience.</p>
+                </div>
+            </section>
         </main>
 
         <footer>
-            <!-- normally information like contact details etc  -->
-            <!-- read more about semantic HTML https://www.w3schools.com/html/html5_semantic_elements.asp -->
-            
-         </footer>
+            <!-- Contact and additional information -->
+        </footer>
+
+        <script>
+            // Same cursor system as main page
+            const cursor = document.querySelector('.cursor');
+            const cursorFollower = document.querySelector('.cursor-follower');
+
+            let mouseX = 0;
+            let mouseY = 0;
+            let followerX = 0;
+            let followerY = 0;
+
+            if (cursor && cursorFollower) {
+                document.addEventListener('mousemove', (e) => {
+                    mouseX = e.clientX;
+                    mouseY = e.clientY;
+                    
+                    cursor.style.left = mouseX + 'px';
+                    cursor.style.top = mouseY + 'px';
+                });
+
+                function animateFollower() {
+                    const speed = 0.2;
+                    
+                    followerX += (mouseX - followerX) * speed;
+                    followerY += (mouseY - followerY) * speed;
+                    
+                    cursorFollower.style.left = followerX + 'px';
+                    cursorFollower.style.top = followerY + 'px';
+                    
+                    requestAnimationFrame(animateFollower);
+                }
+
+                animateFollower();
+
+                // Cursor hover effects
+                const hoverElements = document.querySelectorAll('a, iframe');
+
+                hoverElements.forEach(el => {
+                    el.addEventListener('mouseenter', () => {
+                        cursor.style.transform = 'scale(2)';
+                        cursorFollower.style.transform = 'scale(1.5)';
+                        cursorFollower.style.borderColor = 'rgba(0, 0, 0, 0.5)';
+                    });
+                    
+                    el.addEventListener('mouseleave', () => {
+                        cursor.style.transform = 'scale(1)';
+                        cursorFollower.style.transform = 'scale(1)';
+                        cursorFollower.style.borderColor = 'rgba(0, 0, 0, 0.2)';
+                    });
+                });
+            }
+
+            // Scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const fadeObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            // Apply animations to content sections
+            document.querySelectorAll('.project-story, .area1, .technical-section').forEach(el => {
+                el.classList.add('fade-in');
+                fadeObserver.observe(el);
+            });
+        </script>
     </body>
 </html>

@@ -1,24 +1,292 @@
-div.area1
-{
-    text-align: center;
-    font-size: 30px;
-    color: white;
-    padding: 10px;
+/* Project-specific styles for Are You Leaving? */
+
+/* Force images to show immediately - override main CSS */
+img {
+    opacity: 1 !important;
+}
+
+/* Project Navigation */
+.project-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 20px 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.back-link {
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #000;
+    transition: opacity 0.3s ease;
+}
+
+.back-link:hover {
+    opacity: 0.6;
+}
+
+/* Project Header */
+.project-header {
+    padding: 120px 40px 80px;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.project-meta {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 500px;
+    gap: 40px;
+    margin-bottom: 40px;
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.7;
 }
-div.area1 .one
-{
-    
-    
-    width:30%; 
-    float: left;  
+
+.project-header h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 200;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    color: #000;
 }
-div.area1 .two
-{
-   
-    width:30%; 
+
+.project-description {
+    max-width: 800px;
+}
+
+.project-description p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: #333;
+}
+
+/* Main Content */
+.project-main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.project-story {
+    padding: 80px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.story-content p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Video Section */
+.area1 {
+    padding: 80px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.area1 iframe {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.area1 p {
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    opacity: 0.7;
+}
+
+.area1 a {
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.area1 a:hover {
+    border-color: #000;
+}
+
+/* Technical Section */
+.technical-section {
+    padding: 80px 0;
+}
+
+.technical-section h2 {
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.tech-content p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    padding: 40px;
+    text-align: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-nav,
+    .project-header,
+    .project-main {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .project-header h1 {
+        font-size: clamp(2rem, 8vw, 3rem);
+    }
+
+    .project-meta {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project-description p {
+        font-size: 16px;
+    }
+    
+    .area1 iframe {
+        height: 250px;
+        border-radius: 4px;
+    }
+    
+    .story-content p,
+    .tech-content p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-header {
+        padding-top: 100px;
+    }
+    
+    .project-nav {
+        padding: 15px 20px;
+    }
+    
+    .back-link {
+        font-size: 11px;
+    }
+    
+    .project-meta {
+        font-size: 9px;
+    }
+    
+    .area1 iframe {
+        height: 200px;
+    }
+}
+
+/* Scroll animations for project content */
+.project-story,
+.area1,
+.technical-section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.project-story.visible,
+.area1.visible,
+.technical-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Enhanced video presentation */
+.area1 {
+    position: relative;
+}
+
+.area1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0,0,0,0.1), transparent);
+}
+
+/* Custom styling for this specific project */
+.project-header {
+    background: linear-gradient(135deg, rgba(15,15,35,0.02), rgba(26,26,62,0.02));
+}
+
+/* Typography enhancements */
+.story-content p:first-child::first-letter {
+    font-size: 3.5em;
     float: left;
+    line-height: 0.8;
+    margin: 0.1em 0.1em 0 0;
+    font-weight: 200;
+    color: #333;
+}
+
+/* Link styling throughout the page */
+a:not(.back-link) {
+    transition: all 0.3s ease;
+}
+
+a:not(.back-link):hover {
+    opacity: 0.7;
+}
+
+/* Smooth scrolling enhancement */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading state */
+.loading .project-story,
+.loading .area1,
+.loading .technical-section {
+    animation-play-state: paused;
 }

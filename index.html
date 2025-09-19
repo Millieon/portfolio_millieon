@@ -2,167 +2,172 @@
 <html>
     <head>
         <meta charset="UTF-8">
-
-        <!-- meta viewport tag needed to make site responsive on mobile devices https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag -->
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        <title>Portfolio - Millieon Hu</title>
-
+        <title>MILLIEON HU</title>
         <link rel="stylesheet" href="./css/style.css">
-
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
     </head>
     <body>
+        <div class="cursor"></div>
+        <div class="cursor-follower"></div>
 
         <header>
             <h1>Millieon Hu</h1>
-
-            Millieon Hu (b.1999, Beijing) is a computational artist living and working in London. She studied at University of Amsterdam (2021-2022) and Goldsmiths, University of London (2022-2023). With a data science and computer science background, Millieon holds great interests in creating art with big data, artificial intelligence, and sensors, working across multi-disciplinary practice including interactive installations, screen-based artworks, performances and audio-visuals. Through varied mediums, the artist investigates the notion of Asian diasporas, censorship, linguistics and how our fragility, and emotions could be expressed through technological approaches.
-
-            You can check out my Instagram <a href="https://www.instagram.com/millieon_datart/">here.</a>
-            
+            <div class="bio-text">
+                <p>Millieon Hu (b.1999, Beijing) is a computational artist living and working in London. She studied at University of Amsterdam (2021-2022) and Goldsmiths, University of London (2022-2023). With a data science and computer science background, Millieon holds great interests in creating art with big data, artificial intelligence, and sensors, working across multi-disciplinary practice including interactive installations, screen-based artworks, performances and audio-visuals. Through varied mediums, the artist investigates the notion of Asian diasporas, censorship, linguistics and how our fragility, and emotions could be expressed through technological approaches.</p>
+                
+                <p>You can check out my Instagram <a href="https://www.instagram.com/millieon_datart/">here.</a></p>
+            </div>
         </header>
 
         <main>
-            <h3>Curated Artworks</h3>
-                <h5 style="color: #4f4f4f;">Are You Leaving? (2023) </h5>
-                <h5 style="color: #4f4f4f;">A Fluid Dream (2024)</h5>
-                <h5 style="color: #4f4f4f;">Under the Gaze (2023)</h5>
-                <h5 style="color: #4f4f4f;">Retro 80s' A/V (2023)</h5>
-                <h5 style="color: #4f4f4f;">Space Colony (2023)</h5>
+            <section class="artwork-section">
+                <h3>Curated Artworks</h3>
+                <div class="project-list">
+                    <div class="project-entry">Are You Leaving? (2023)</div>
+                    <div class="project-entry">A Fluid Dream (2024)</div>
+                    <div class="project-entry">Under the Gaze (2023)</div>
+                    <div class="project-entry">Retro 80s' A/V (2023)</div>
+                    <div class="project-entry">Space Colony (2023)</div>
+                </div>
                 
                 <section class="flex-container">
-                <div class="flex-item"> 
-                    <a class="rul" href="./Are_you_leaving/">
-                        <h4> Are You Leaving? (2023) documentation</h4>
-                    </a>
-                </div>
-                
-                <div class="flex-item"> 
-                    <a class="fluidDreams" href="./Fluid_dreams/">
-                        <h4> A Fluid Dream (2024) documentation</h4>
-                    </a>
-                </div>
-                <div class="flex-container-vertical">
                     <div class="flex-item"> 
-                        <a class="gaze" href="./underTheGaze/">
-                            <h4> Under the gaze (2023) documentation</h4>
-                        </a>
-                        
-                    </div>
-                    <div class="flex-item"> 
-                        <a class="aavp" href="./AAVP/">
-                            <h4> Retro 80s' A/V (2023) documentation</h4>
+                        <a class="rul" href="./Are_you_leaving/">
+                            <img src="./assets/images/are-you-leaving-cover.jpg" alt="Are You Leaving?" />
+                            <div class="year-label">2023</div>
+                            <h4>Are You Leaving? documentation</h4>
                         </a>
                     </div>
-                    <div class="flex-item"> 
-                        <a class="ant" href="./Space_Colony/">
-                            <h4> Space Colony (2023)</h4>
-                        </a>
-                    </div>
-
-
-
-                
-                </div>
-         
-                
-
-                </section>
-            
-            <h4>School Projects, Goldsmiths, University of London</h4>
-            <h4>A curated selection of term 1 projects</h4>
-            <h5 style="color: #4f4f4f;">Diasopra, (2023) </h5>
-            <h5 style="color: #4f4f4f;">Free Speech Board (2023) </h5>
-            <h5 style="color: #4f4f4f;">Book about the banned books (2023) </h5>
-            <section class="flex-container">
-                <div class="flex-item"> 
-                    <a class="diasopra" href="./html-demo-page">
-                        <h4>Diasopra</h4>
-                    </a>
-                </div>
-
-                <div class="flex-item"> 
-                    <a class="board" href="./html-demo-page copy">
-                        <h4>Free Speech Board</h4>
-                    </a>
-                </div>
-
-                <div class="flex-item"> 
                     
-                    <a class="book" href="./book/">
-                        <h4>Book about the banned books, (2023)</h4>
-                    </a>
-                </div>
+                    <div class="flex-item"> 
+                        <a class="fluidDreams" href="./Fluid_dreams/">
+                            <img src="./assets/images/fluid-dreams-cover.jpg" alt="A Fluid Dream" />
+                            <div class="year-label">2024</div>
+                            <h4>A Fluid Dream documentation</h4>
+                        </a>
+                    </div>
 
+                    <div class="flex-container-vertical">
+                        <div class="flex-item"> 
+                            <a class="gaze" href="./underTheGaze/">
+                                <img src="./assets/images/under-the-gaze-cover.jpg" alt="Test" />
+                                <div class="year-label">2023</div>
+                                <h4>Under the gaze documentation</h4>
+                            </a>
+                        </div>
+                        <div class="flex-item"> 
+                            <a class="aavp" href="./AAVP/">
+                                <img src="./assets/images/retro-80s-cover.jpg" alt="Retro 80s A/V" />
+                                <div class="year-label">2023</div>
+                                <h4>Retro 80s' A/V documentation</h4>
+                            </a>
+                        </div>
+                        <div class="flex-item"> 
+                            <a class="ant" href="./Space_Colony/">
+                                <img src="./assets/images/space-colony-cover.jpg" alt="Space Colony" />
+                                <div class="year-label">2023</div>
+                                <h4>Space Colony</h4>
+                            </a>
+                        </div>
+                    </div>
+                </section>
             </section>
-
-            <h4>A curated selection of term 2 projects</h4>
-            <h5 style="color: #4f4f4f;"> 1. Week1: Hyper-text Concrete Poem (already graded) *</h5>
-            <h5 style="color: #4f4f4f;">2. Week2: As If, the Illusion of Life (already graded)* </h5>
-            <h5 style="color: #4f4f4f;">3. Week3: Make or Scrape (already graded)* </h5>
-            <h5 style="color: #4f4f4f;">4. Week9: Personal response to Approaches to Seeing and Sensing (1%) (submitted for grading through zip) ** </h5>
-            <h5 style="color: #4f4f4f;">5. Week5: Pull & Push  (1%)</h5>
             
-            <section class="flex-container">
-             
-
-
-                <div class="flex-item"> 
-                    <a class="poem" href="https://millieon.github.io/hyperpoem/">
-                        <h4>1. Hypertext Concrete Poem: Are you bored yet</h4>
-                    </a>
+            <section class="school-section">
+                <h4>School Projects, Goldsmiths, University of London</h4>
+                <h4>A curated selection of term 1 projects</h4>
+                <div class="project-list">
+                    <div class="project-entry">Diasopra, (2023)</div>
+                    <div class="project-entry">Free Speech Board (2023)</div>
+                    <div class="project-entry">Book about the banned books (2023)</div>
                 </div>
 
-                <div class="flex-item"> 
-                    <a class="tomagochi" href="https://millieon.github.io/illusion-of-life/">
-                        <h4>2. Tomagochi </h4>
-                    </a>
+                <section class="flex-container">
+                    <div class="flex-item"> 
+                        <a class="diasopra" href="./html-demo-page">
+                            <img src="./assets/images/diasopra-cover.jpg" alt="Diasopra" />
+                            <div class="year-label">2023</div>
+                            <h4>Diasopra</h4>
+                        </a>
+                    </div>
+
+                    <div class="flex-item"> 
+                        <a class="board" href="./html-demo-page copy">
+                            <img src="./assets/images/free-speech-board-cover.jpg" alt="Free Speech Board" />
+                            <div class="year-label">2023</div>
+                            <h4>Free Speech Board</h4>
+                        </a>
+                    </div>
+
+                    <div class="flex-item"> 
+                        <a class="book" href="./book/">
+                            <img src="./assets/images/banned-books-cover.jpg" alt="Book about banned books" />
+                            <div class="year-label">2023</div>
+                            <h4>Book about the banned books</h4>
+                        </a>
+                    </div>
+                </section>
+
+                <h4>A curated selection of term 2 projects</h4>
+                <div class="project-list">
+                    <div class="project-entry graded-entry">1. Week1: Hyper-text Concrete Poem (already graded) *</div>
+                    <div class="project-entry graded-entry">2. Week2: As If, the Illusion of Life (already graded)* </div>
+                    <div class="project-entry graded-entry">3. Week3: Make or Scrape (already graded)* </div>
+                    <div class="project-entry">4. Week9: Personal response to Approaches to Seeing and Sensing (1%) (submitted for grading through zip) **</div>
+                    <div class="project-entry">5. Week5: Pull & Push (1%)</div>
                 </div>
-
-                <div class="flex-item"> 
-                    <a class="map" href="./memory_map/">
-                        <h4>3. Memory Map</h4>
-                    </a>
-                </div>
-
-                <div class="flex-item"> 
-                    <a class="bugs" href="./whereRtheBugs/">
-                        <h4>4. Where are the bugs?</h4>
-                    </a>
-                </div>
-
-                <div class="flex-item"> 
-                    <a class="peacehouse" href="https://millieon.github.io/Group_Project_wcc2/">
-                        <h4>5. The Peace House</h4>
-                    </a>
-                </div>
-
-            </section> 
-
-
                 
+                <section class="flex-container">
+                    <div class="flex-item graded"> 
+                        <a class="poem" href="https://millieon.github.io/hyperpoem/">
+                            <img src="./assets/images/hypertext-poem-cover.jpg" alt="Hypertext Concrete Poem" />
+                            <div class="year-label">GRADED</div>
+                            <h4>1. Hypertext Concrete Poem: Are you bored yet</h4>
+                        </a>
+                    </div>
 
+                    <div class="flex-item graded"> 
+                        <a class="tomagochi" href="https://millieon.github.io/illusion-of-life/">
+                            <img src="./assets/images/tomagochi-cover.jpg" alt="Tomagochi" />
+                            <div class="year-label">GRADED</div>
+                            <h4>2. Tomagochi</h4>
+                        </a>
+                    </div>
 
+                    <div class="flex-item graded"> 
+                        <a class="map" href="./memory_map/">
+                            <img src="./assets/images/memory-map-cover.jpg" alt="Memory Map" />
+                            <div class="year-label">GRADED</div>
+                            <h4>3. Memory Map</h4>
+                        </a>
+                    </div>
 
-         
+                    <div class="flex-item"> 
+                        <a class="bugs" href="./whereRtheBugs/">
+                            <img src="./assets/images/bugs-cover.jpg" alt="Where are the bugs?" />
+                            <div class="year-label">1%</div>
+                            <h4>4. Where are the bugs?</h4>
+                        </a>
+                    </div>
 
-
-
-
-
-        
-
-                    <!-- Keep adding per week -->
-
-                
-           
-
+                    <div class="flex-item"> 
+                        <a class="peacehouse" href="https://millieon.github.io/Group_Project_wcc2/">
+                            <img src="./assets/images/peace-house-cover.jpg" alt="The Peace House" />
+                            <div class="year-label">1%</div>
+                            <h4>5. The Peace House</h4>
+                        </a>
+                    </div>
+                </section> 
+            </section>
         </main>
+
         <footer>
-           <!-- normally information like contact details etc  -->
-           <!-- read more about semantic HTML https://www.w3schools.com/html/html5_semantic_elements.asp -->
-           
+           <!-- Contact and additional information -->
         </footer>
 
+        <script src="./js/script.js"></script>
     </body>
 </html>
